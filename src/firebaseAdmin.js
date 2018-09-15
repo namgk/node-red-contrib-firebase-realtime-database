@@ -1,4 +1,4 @@
-const FirebaseAdminNode = require('./FirebaseAdminNode');
+const FirebaseAdminNode = require('./firebaseAdminNode');
 
 module.exports = function(RED) {
   "use strict";

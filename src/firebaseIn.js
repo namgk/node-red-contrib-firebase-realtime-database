@@ -1,4 +1,4 @@
-const FirebaseInNode = require('./FirebaseInNode');
+const FirebaseInNode = require('./firebaseInNode');
 
 function validateNodeConfig(n){
   if (!n.ref){

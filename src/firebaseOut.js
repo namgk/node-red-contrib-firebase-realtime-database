@@ -1,4 +1,4 @@
-const FirebaseOutNode = require('./FirebaseOutNode');
+const FirebaseOutNode = require('./firebaseOutNode');
 
 function validateNodeConfig(n){
   if (!n.ref){
