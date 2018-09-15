@@ -24,6 +24,9 @@
     },
     credentials: {
       serviceAccountJson: {required: true}
+    },
+    label: function() {
+        return this.name || "no name specified!";
     }
   });
 </script>
