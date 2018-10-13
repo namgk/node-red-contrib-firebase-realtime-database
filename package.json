@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "description": "Communicate with google firebase realtime database. These nodes use the new firebase-admin API and service account json is used for authentication.",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
