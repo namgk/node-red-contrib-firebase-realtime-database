@@ -7,16 +7,21 @@ function FirebaseOutNode(config) {
     throw 'Database ref Not Present';
   }
 
+  if (!config.operation){
+    throw 'Write Operation is not defined';
+  }
+
   this.ref = config.ref;
+  this.operation = config.operation;
   this.database = config.admin.database;
 	this.onStatus = ()=>{}
 }
 
 FirebaseOutNode.prototype.onInput = function(msg, out, errorcb) {
   const refPath = msg.ref || this.ref;
-  // const ref = this.database.ref(refPath);
+  const operation = msg.operation || this.operation;
 
-  this.database.ref().child(refPath).set(msg.payload, error => {
+  this.database.ref().child(refPath)[operation](msg.payload, error => {
     if (error){
       errorcb(error);
     } else {

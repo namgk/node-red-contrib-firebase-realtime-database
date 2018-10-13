@@ -5,6 +5,10 @@ function validateNodeConfig(n){
     throw "No ref specified";
   }
 
+  if (!n.operation){
+    throw "No operation specified";
+  }
+
   if (!n.admin) {
     throw "No admin specified";
   }
@@ -20,6 +24,7 @@ module.exports = function(RED) {
     var node = this;
 
     node.ref = n.ref;
+    node.operation = n.operation;
     node.admin = RED.nodes.getNode(n.admin);
 
     const firebaseOutNode = new FirebaseOutNode(node)
