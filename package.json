@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/namgk/node-red-contrib-firebase-realtime-database#readme",
   "dependencies": {
-    "firebase-admin": "^4.0.3"
+    "firebase-admin": "^6.0.0"
   },
   "node-red": {
     "nodes": {
