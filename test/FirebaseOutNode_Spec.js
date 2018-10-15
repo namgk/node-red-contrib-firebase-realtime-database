@@ -1,11 +1,11 @@
-const FirebaseAdminNode = require('../src/FirebaseAdminNode');
+const FirebaseAdminNode = require('../src/firebaseAdminNode');
 const assert = require('assert');
 
-const FirebaseOutNode = require('../src/FirebaseOutNode');
+const FirebaseOutNode = require('../src/firebaseOutNode');
 const serviceAccountJson = require('./my-firebase-service-credential.json');
 
 describe('FirebaseOutNode', function() {
-	it('Fail without ref', function() {
+	it('Fail without ref', function(done) {
   	const firebaseAdminNode = new FirebaseAdminNode({
 			serviceAccountJson: serviceAccountJson
 		});
@@ -16,11 +16,11 @@ describe('FirebaseOutNode', function() {
 	  	});
 	  	assert.fail()
   	} catch (e){
-      firebaseAdminNode.onClose(null, ()=>{});
+      firebaseAdminNode.onClose(null, done);
   	}
   });
 
-  it('Fails without operation', function() {
+  it('Fails without operation', function(done) {
     const firebaseAdminNode = new FirebaseAdminNode({
       serviceAccountJson: serviceAccountJson
     });
@@ -31,7 +31,7 @@ describe('FirebaseOutNode', function() {
       });
       assert.fail()
     } catch (e){
-      firebaseAdminNode.onClose(null, ()=>{});
+      firebaseAdminNode.onClose(null, done);
     }
   });
 

@@ -3,7 +3,7 @@ const chai = require('chai');
 
 const expect = chai.expect;
 
-const FirebaseAdminNode = require('../src/FirebaseAdminNode');
+const FirebaseAdminNode = require('../src/firebaseAdminNode');
 const serviceAccountJson = require('./my-firebase-service-credential.json');
 
 describe('FirebaseAdminNode', function() {

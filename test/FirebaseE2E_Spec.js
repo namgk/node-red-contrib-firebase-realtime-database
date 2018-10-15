@@ -1,8 +1,8 @@
-const FirebaseAdminNode = require('../src/FirebaseAdminNode');
+const FirebaseAdminNode = require('../src/firebaseAdminNode');
 const assert = require('assert');
 
-const FirebaseInNode = require('../src/FirebaseInNode');
-const FirebaseOutNode = require('../src/FirebaseOutNode');
+const FirebaseInNode = require('../src/firebaseInNode');
+const FirebaseOutNode = require('../src/firebaseOutNode');
 const serviceAccountJson = require('./my-firebase-service-credential.json');
 
 describe('Firebase e2e test', function() {
@@ -22,7 +22,8 @@ describe('Firebase e2e test', function() {
 
     const firebaseOutNode = new FirebaseOutNode({
       admin: firebaseAdminNode,
-      ref: newRef
+      ref: newRef,
+      operation: 'set'
     });
 
     const initialValue = Math.floor(Math.random() * 100);
