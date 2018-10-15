@@ -1,6 +1,6 @@
 <script type="text/x-red" data-template-name="firebase out">
   <div class="form-tips"><p>Firebase database communication</p>
-  
+
     <div class="form-row">
       <label for="node-input-admin"><i class="fa"></i> Firebase Admin</label>
       <input type="text" id="node-input-admin">
@@ -10,6 +10,13 @@
       <input type="text" id="node-input-name">
     </div>
     <div class="form-row">
+      <label for="node-input-operation"><i class="fa fa-tag"></i> Write operation </label>
+      <select name="operation" id="node-input-operation">
+        <option value="set">Set</option>
+        <option value="push">Push</option>
+      </select>
+    </div>
+    <div class="form-row">
       <label for="node-input-ref"><i class="fa fa-tag"></i> Database Ref </label>
       <input type="text" id="node-input-ref" placeholder="database ref">
     </div>
@@ -17,7 +24,7 @@
 </script>
 
 <script type="text/x-red" data-help-name="firebase out">
-    <p>This node push/update data to the database. If the update is success, it will forward the msg to its output</p>
+    <p>This node set/push data to the database. If the update is success, it will forward the msg to its output</p>
 </script>
 
 <style type="text/css">
@@ -40,6 +47,13 @@
     defaults: {
       name: {required:false},
       ref: {required:true},
+      operation: {
+        required:true,
+        value:"set",
+        validate:function(val){
+        return val === 'set' || val === 'push'
+        }
+      },
       admin: {type:"firebase admin",required:true}
     },
     color: "#FF7900",
