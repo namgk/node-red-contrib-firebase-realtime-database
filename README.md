@@ -7,7 +7,7 @@ Also due to naming conflicts, some of the node names have been changed, if you s
 
 # Communicate with Google Firebase real-time database
 
-These nodes use the new firebase-admin API and service account json is used for authentication.
+These nodes support Set and Push operations, as well as watching for changes.
 
 ## To run test, create a file in the test folder:
 
