@@ -35,7 +35,7 @@ module.exports = function(RED) {
     })
   }
 
-  RED.nodes.registerType("firebase out", FirebaseOut);
+  RED.nodes.registerType("firebase realtime database out", FirebaseOut);
 }
 
 
