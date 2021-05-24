@@ -18,6 +18,7 @@ function FirebaseOutNode(config) {
 }
 
 FirebaseOutNode.prototype.onInput = function(msg, out, errorcb) {
+  console.log(this);
   const refPath = msg.ref || this.ref;
   const operation = msg.operation || this.operation;
 

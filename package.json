@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-firebase-realtime-database",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Communicate with google firebase realtime database. These nodes use the new firebase-admin API and service account json is used for authentication.",
   "scripts": {
     "test": "mocha"
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/namgk/node-red-contrib-firebase-realtime-database#readme",
   "dependencies": {
-    "node-red-contrib-firebase-admin-config": "^1.0.2"
+    "node-red-contrib-firebase-admin-config": "^1.0.3"
   },
   "peerDependencies": {
     "firebase-admin": "^9.8.0"
