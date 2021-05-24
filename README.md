@@ -11,7 +11,7 @@ These nodes use the new firebase-admin API and service account json is used for 
 
 ## To run test, create a file in the test folder:
 
-    touch my-firebase-service-credential.json
+    cd test && touch my-firebase-service-credential.json
 
 Setup a firebase project, get and paste the service account json to this file.
 
