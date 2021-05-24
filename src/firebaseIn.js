@@ -28,7 +28,7 @@ module.exports = function(RED) {
     firebaseInNode.setStatusCallback(node.status.bind(node))
   }
 
-  RED.nodes.registerType("firebase in", FirebaseIn);
+  RED.nodes.registerType("firebase realtime database in", FirebaseIn);
 }
 
 
