@@ -1,4 +1,4 @@
-const FirebaseAdminNode = require('../src/firebaseAdminNode');
+const FirebaseAdminNode = require('node-red-contrib-firebase-admin-config');
 const assert = require('assert');
 
 const FirebaseInNode = require('../src/firebaseInNode');
